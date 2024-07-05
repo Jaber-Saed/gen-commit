@@ -2,7 +2,7 @@
   "name": "gen-commit",
   "displayName": "Gen Commit ✨",
   "description": "Use LLM API to review Git changes, generate conventional commit messages that meet the conventions, simplify the commit process, and keep the commit conventions consistent.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": ">=16",
     "vscode": "^1.77.0"
@@ -11,6 +11,8 @@
     "Other"
   ],
   "keywords": [
+    "Codder Commit",
+    "Gen Commit",
     "Azure",
     "OpenAI",
     "ChatGPT",
@@ -20,8 +22,6 @@
     "Commitizen",
     "Commit Message",
     "Commit Message Generator",
-    "Gen Commit",
-    "Codder Commit",
     "Auto Commit"
   ],
   "publisher": "JaberSaid",
