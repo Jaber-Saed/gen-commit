@@ -1,0 +1,171 @@
+{
+  "name": "gen-commit",
+  "displayName": "Gen Commit ✨",
+  "description": "Use LLM API to review Git changes, generate conventional commit messages that meet the conventions, simplify the commit process, and keep the commit conventions consistent.",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=16",
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "Azure",
+    "OpenAI",
+    "ChatGPT",
+    "GitEmoji",
+    "Git Commit",
+    "Conventional Commits",
+    "Commitizen",
+    "Commit Message",
+    "Commit Message Generator",
+    "Gen Commit",
+    "Auto Commit"
+  ],
+  "publisher": "JaberSaid",
+  "repository": "https://github.com/Jaber-Saed/gen-commit",
+  "icon": "images/logo.png",
+  "activationEvents": [
+    "onCommand:gen-commit"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.gen-commit",
+        "icon": {
+          "dark": "images/icon.svg",
+          "light": "images/icon.svg"
+        },
+        "title": " Gen Commit ✨"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "gen-commit.AI_COMMIT_LANGUAGE": {
+          "default": "en",
+          "description": "Commit message language",
+          "enum": [
+            "ar",
+            "zh_CN",
+            "zh_TW",
+            "ja",
+            "ko",
+            "cs",
+            "de",
+            "fr",
+            "it",
+            "nl",
+            "pt_br",
+            "vi_VN",
+            "en",
+            "es_ES",
+            "sv",
+            "ru",
+            "id_ID",
+            "pl",
+            "tr",
+            "th"
+          ],
+          "enumDescriptions": [
+            "العربية",
+            "简体中文",
+            "繁體中文",
+            "にほんご",
+            "한국어",
+            "česky",
+            "Deutsch",
+            "française",
+            "italiano",
+            "Nederlands",
+            "português",
+            "tiếng Việt",
+            "english",
+            "español",
+            "Svenska",
+            "русский",
+            "bahasa",
+            "Polski",
+            "Turkish",
+            "ไทย"
+          ],
+          "type": "string"
+        },
+        "gen-commit.EMOJI_ENABLED": {
+          "default": true,
+          "description": "Enable Emoji",
+          "type": "boolean"
+        },
+        "gen-commit.FULL_GITMOJI_SPEC": {
+          "default": false,
+          "description": "Enable full GitEmoji specification",
+          "type": "boolean"
+        },
+        "gen-commit.API_KEY": {
+          "default": "",
+          "description": "Set API Key",
+          "type": "string"
+        },
+        "gen-commit.API_BASE_URL": {
+          "default": "",
+          "description": "Set API BASE URL ex:'https://api.openai.com/v1'",
+          "type": "string"
+        },
+        "gen-commit.MODEL": {
+          "default": "",
+          "description": "Set Name of AI Model ex:'gpt-3.5-turbo'",
+          "type": "string"
+        }
+      },
+      "title": "Gen Commit"
+    },
+    "menus": {
+      "scm/title": [
+        {
+          "command": "extension.gen-commit",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "webpack --mode production --devtool hidden-source-map",
+    "compile": "webpack",
+    "compile-tests": "tsc -p . --outDir out",
+    "lint": "eslint src --ext ts",
+    "package": "npm vsce package --no-dependencies",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "publish": "npm vsce publish --no-dependencies",
+    "test": "node ./out/test/runTest.js",
+    "vscode:prepublish": "npm run build",
+    "watch": "webpack --watch",
+    "watch-tests": "tsc -p . -w --outDir out"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "fs-extra": "^11.0.4",
+    "openai": "^4.14.2",
+    "simple-git": "^3.17.0"
+  },
+  "resolutions": {
+    "@types/node": "16.x"
+  },
+  "license": "MIT"
+}
