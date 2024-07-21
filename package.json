@@ -128,7 +128,7 @@
           "type": "string"
         },
         "gen-commit.EMOJI_ENABLED": {
-          "default": true,
+          "default": false,
           "description": "Enable Emoji",
           "type": "boolean"
         },

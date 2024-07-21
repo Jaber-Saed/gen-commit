@@ -35,7 +35,7 @@ Configure the extension in VS Code settings under the "gen-commit" section:
 | API_BASE_URL       | string  | None    | Yes      | Base URL for the AI service API |
 | AI_MODEL_NAME      | string  | None    | Yes      | Name of the AI model to use |
 | AI_COMMIT_LANGUAGE | string  | "en"    | Yes      | Language for commit messages |
-| EMOJI_ENABLED      | boolean | true    | Yes      | Enable/disable Gitmoji |
+| EMOJI_ENABLED      | boolean | false    | Yes      | Enable/disable Gitmoji |
 | FULL_GITMOJI_SPEC  | boolean | false   | No       | Use full Gitmoji specification |
 
 
