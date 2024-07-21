@@ -2,7 +2,7 @@
   "name": "gen-commit",
   "displayName": "Gen Commit ✨",
   "description": "Use LLM API to review Git changes, generate conventional commit messages that meet the conventions, simplify the commit process, and keep the commit conventions consistent.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "node": ">=16",
     "vscode": "^1.77.0"
