@@ -73,3 +73,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 If you encounter any problems or have any suggestions, please open an issue in the GitHub repository.
+
+If you find this project useful, please consider starring🌟 our GitHub repository to support our work! Your star helps us grow and continue developing new features.
